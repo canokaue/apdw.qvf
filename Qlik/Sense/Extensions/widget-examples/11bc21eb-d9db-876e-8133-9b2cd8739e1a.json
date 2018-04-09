@@ -1,0 +1,45 @@
+{
+  "name": "Icon Next-Sheet",
+  "description": "Customizable arrow-icon to jump to the next sheet.",
+  "author": "",
+  "library": "widget-examples",
+  "meta": {
+    "type": "navigation"
+  },
+  "properties": {
+    "sections": [
+      {
+        "type": "header",
+        "order": 1,
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "#4d79ff",
+        "options": [
+          {
+            "label": "red",
+            "value": "#ff4d4d"
+          },
+          {
+            "label": "green",
+            "value": "#70db70"
+          },
+          {
+            "label": "blue",
+            "value": "#4d79ff"
+          }
+        ],
+        "order": 0,
+        "parent": "header1",
+        "ref": "color",
+        "label": "Color",
+        "oldOrder": 0
+      }
+    ]
+  }
+}

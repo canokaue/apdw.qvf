@@ -1,0 +1,16 @@
+[General]
+cloudreg=false
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x2\0\0\xff\xff\xff\xf8\xff\xff\xff\xf8\0\0\x5]\0\0\x3\a\0\0\0\xd9\0\0\0&\0\0\x4(\0\0\x2\xf3\0\0\0\0\x2\0\0\0\x5V)
+windowState=@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\0\0\0\x5V\0\0\x2\xe9\0\0\0\x4\0\0\0\x4\0\0\0\b\0\0\0\b\xfc\0\0\0\0)
+qvHideHubGettingStarted=hide
+
+[Logging]
+logpath=C:\\Users\\KAUE\\Documents\\Qlik\\Sense\\Log\\QlikSenseBrowser
+
+[Authentication]
+MostRecentlyUsedHub=42e8e3dbc8fc1690fe84ea3a2b7e1792e45fe4ae4ad91f103f4ea39e7fd86d11
+
+[User]
+directory=
+id=canokaue
+name=Kaue Cano

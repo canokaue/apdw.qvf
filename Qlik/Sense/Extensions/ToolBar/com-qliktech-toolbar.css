@@ -1,0 +1,11 @@
+.qv-object-com-qliktech-toolbar div.qv-object-content-container {
+	overflow: auto;
+}
+
+.qv-object-com-qliktech-toolbar .lui-buttongroup {
+	font-size: 13px;
+}
+
+.qv-object-com-qliktech-toolbar .lui-select {
+	max-width: 160px;
+}

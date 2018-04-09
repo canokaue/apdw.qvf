@@ -1,0 +1,57 @@
+<style>@barColor: #5f5f5f;
+.row {
+	transition: all 0.3s ease;
+	float: left;
+	width: 98%;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #efefef;
+	margin-bottom: 2px;
+	border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+}
+.bar {
+	float: left;
+	clear: left;
+	height: 30px;
+	background-color: @barColor;
+}
+.bar span {
+	font-weight: bold;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 7px;
+	color: #f0f0f0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 90%;
+	white-space: nowrap;
+}
+.per {
+	position: relative;
+}
+.per span {
+	font-weight: bold;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+.per span.over {
+	position: absolute;
+	right: 15px;
+	color: #f0f0f0;
+}
+</style>
+<div><div style="height:100%;overflow:auto">
+	<div ng-repeat="row in data.rows" class="row" title="{{row.dimensions[0].qText}}">
+	  <div class="bar" style="width:{{row.measures[0].getPercentOfMax()}}%">
+		<span>{{row.dimensions[0].qText}}</span>
+	  </div>
+	  <div class="per">
+		<span class="{{row.measures[0].getPercentOfMax()>95 ? 'over':'' }}">{{row.measures[0].qText}}</span>
+	  </div>
+	</div>
+</div>
+</div>

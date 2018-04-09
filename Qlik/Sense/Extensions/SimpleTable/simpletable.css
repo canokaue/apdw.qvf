@@ -1,0 +1,21 @@
+.qv-object-com-qliktech-simpletable div.qv-object-content-container {
+	overflow: auto;
+}
+.qv-object-com-qliktech-simpletable td,
+.qv-object-com-qliktech-simpletable th {
+	border-top: 0px solid #fff;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	cursor: default;
+	font-size: 12px;
+}
+.qv-object-com-qliktech-simpletable td.numeric {
+	text-align: right;
+}
+.qv-object-com-qliktech-simpletable button {
+	width: 100%;
+}

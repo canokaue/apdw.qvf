@@ -1,0 +1,143 @@
+body {
+	padding-bottom: 30px;
+}
+
+div.qvobject, div.qvplaceholder {
+	padding: 30px 10px 10px 10px;
+	height: 400px;
+}
+
+#main {
+	width: 100%;
+	padding: 0;
+}
+
+.navbar {
+	margin-bottom: 0 !important;
+}
+
+.nav {
+	color: white;
+}
+
+.navbar-brand{
+	max-width: 345px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*
+ * Overrides Bootstrap navbar z-index to avoid conflict with selections bar
+ */
+.navbar-fixed-top {
+	position: relative;
+	z-index: 100;
+}
+
+.full {
+	width: 100%;
+	height: 100%;
+}
+
+.width {
+	width: 80%;
+}
+
+.borderShadow {
+	margin: 15px 0;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0 0 16px -5px rgba(50, 50, 50, 0.52);
+	-moz-box-shadow: 0 0 16px -5px rgba(50, 50, 50, 0.52);
+	box-shadow: 0 0 16px -5px rgba(50, 50, 50, 0.52);
+}
+
+#carousel-example-generic {
+	width: 100%;
+}
+
+.content-section-a {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+.content-section-b {
+	padding-top: 70px;
+	width: 100%;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	z-index: 1;
+	position: relative;
+	bottom: 60px;
+
+}
+
+.content-section-b:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	background: #F5F5F5;
+	-webkit-transform: skew(0deg, 6deg);
+	-moz-transform: skew(0deg, 6deg);
+	-ms-transform: skew(0deg, 6deg);
+	-o-transform: skew(0deg, 6deg);
+	transform: skew(0deg, 6deg);
+}
+
+.content-section-b:after {
+	content: '';
+	position: absolute;
+	top: 0;
+
+	right: 0;
+	height: 100%;
+	width: 50%;
+	background: #F5F5F5;
+	-webkit-transform: skew(0deg, -6deg);
+	-moz-transform: skew(0deg, -6deg);
+	-ms-transform: skew(0deg, -6deg);
+	-o-transform: skew(0deg, -6deg);
+	transform: skew(0deg, -6deg);
+	z-index: -1;
+}
+
+.qcmd {
+	cursor: pointer;
+}
+
+#parallax {
+	width: 100%;
+	height: 300px;
+	position: relative;
+	top: 0;
+	background: url(dark.jpg) no-repeat center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+
+#popup {
+	background-color: #7f8c8d;
+	color: #FFFFFF;
+	position: fixed;
+	padding: 10px;
+	margin: 10px;
+	bottom: 0;
+	right: 0;
+	display: none;
+	border-radius: 5px;
+	z-index: 6;
+}
+
+#footer {
+	background-color: #3F4944;
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: -30px;
+}

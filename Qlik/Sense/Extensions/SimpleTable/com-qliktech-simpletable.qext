@@ -1,0 +1,13 @@
+{
+	"name" : "Simple table",
+	"description" : "Simple table Extension Example",
+	"icon" : "table",
+	"type" : "visualization",
+	"version": "2.1",
+	"author" : "Qlik",
+	"homepage" : "http://help.qlik.com/sense/en-US/developer",
+	"keywords" : "qlik-sense, visualization",
+	"license" : "MIT",
+	"repository" : "",
+    "dependencies" : { "qlik-sense" : ">=3.0.x" }
+}

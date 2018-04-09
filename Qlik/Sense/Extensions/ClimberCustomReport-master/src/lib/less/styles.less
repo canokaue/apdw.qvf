@@ -1,0 +1,173 @@
+#cl-customreport-container.no-interactions {
+  pointer-events: none;
+}
+
+ul.sortablelist{
+  margin: 5px;
+  padding: 5px;
+  min-height: 40px;
+  list-style: none;
+  border: 1px solid @borderGrey;
+  border-radius: 3px;
+  border-color: @borderGrey;
+  
+}
+
+ul.dimension-list {
+  
+  border: 1px solid @borderGrey;
+  border-radius: 3px;
+  min-height: 38px;
+  overflow: auto;
+
+}
+
+.container_left {
+  float: left; 
+  position: relative; 
+  overflow: auto;
+
+}
+.container_right {
+  float: left; 
+  position: relative; 
+}
+.container_crt {
+  height: 500px;
+}
+.dimension-list li {
+  box-sizing: content-box;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  
+}
+
+.dimension-list li:last-child {
+  border-bottom: 0px solid @borderGrey;
+}
+
+ul.measure-list {
+  border: 1px solid @borderGrey;
+  border-radius: 3px;
+  min-height: 38px;
+  overflow: auto;
+}
+.measure-list li {
+  box-sizing: content-box;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+}
+
+.measure-list li:last-child {
+  border-bottom: 0px solid @borderGrey;
+}
+
+
+select {
+  padding-left: 10px;
+  font-weight: normal;
+  height: 38px;
+}
+
+ul.report-list {
+  border:2px;
+  border-color: @borderGrey;
+}
+
+.ghost {
+  opacity: .5;
+}
+
+#customreporttable {
+  height: 100%; 
+  overflow: auto; 
+ // padding-top: 18px;
+}
+.sortablelist li {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: .25em;
+  padding: .3em .6em .2em;
+  margin: 2px;
+  
+}
+
+.sortablelist div {
+  max-width: 120px;
+  font-size: 13px;
+  font-family: 'QlikView Sans', sans-serif;
+  font-weight: normal;
+  padding:2px;
+  line-height: 1;
+  text-align: left;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display:inherit;
+   
+}
+
+.dimension-list div,
+.measure-list div
+ {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+   
+}
+
+.sortablelist span {
+  font-size: 11px;
+  vertical-align: text-top;
+  display: inline-flex;
+  }
+
+
+.containerlabel {
+  font-weight: bold;
+  font-family: 'QlikView Sans', sans-serif;
+  font-size: 16px;
+  margin: 5px 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sortablelist span {
+  cursor: context-menu;
+  padding-left: 2px; 
+}
+
+.label-dimension {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.label-measure {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.plain .label-measure
+ {
+  background-color: white;
+  border: 1px solid @borderGrey;
+  border-radius: 3px;
+  color: @fontColor;
+}
+.plain .label-dimension
+ {
+  background-color: white;
+  border: 1px solid @borderGrey;
+  border-radius: 3px;
+  color: @fontColor;
+}
+
+i {
+  padding-left: 10px;
+}
+
+i.disabled {
+  color: @borderGrey;
+}

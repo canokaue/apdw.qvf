@@ -1,0 +1,402 @@
+<style>// Color palette borrowed from http://flatuicolors.com/
+
+// Style settings start here
+@color: {{settings.color}};
+@darkText: #555;
+@lightText: #efefef;
+@secondaryText: #F2F2F2;
+@gradient: linear-gradient(45deg, #4D4D4D 0%, #808080 100%);
+
+@baseSize: 16px;
+@labelSize: 1.8rem;
+@valSize: 3rem;
+@headerSize: 1.7rem;
+@backLabelSize: 1rem;
+@iconSize: 7rem;
+@smallIconSize: 2rem;
+@descSize: 0.85rem;
+
+// Settings end
+
+.kpi-tile {
+	width:100%;
+	height:100%;
+	max-width: 600px;
+	max-height: 180px;
+	font-size:@baseSize;
+	color: contrast(@color, @darkText, @lightText);
+	overflow: hidden;
+	display: flex;
+  	align-items: center;
+	
+	.transition-properties( font-size 0.3s linear;);
+	
+	.text-container {
+		position: absolute;
+		height: 100%;
+		max-width: 600px;
+		max-height: 180px;
+		width: calc( 100% - 20px );
+		right: 20px;
+		text-align:right;
+	}
+	.value-container {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		text-align:right;
+	  	.label {
+		  	font-size: @labelSize;
+		  	text-transform: uppercase;
+		  	opacity: 0.7;
+		  	font-weight: bold;
+	  	}
+	  	.value {
+		  	font-size: @valSize;
+		  	font-weight:bold;
+		  	margin-bottom:2rem;
+		  	transition-property: font-size;
+		  	transition-duration: 0.4s;
+		  	line-height: 0.7;
+	  	}
+	}
+	
+	.container-content {
+		background-color:@color;
+		max-height: 180px;
+		max-width: 600px;
+		height: 100%;
+		width: 100%;
+		display: flex;
+  		align-items: center;
+		
+	}
+	
+	.container-icon {
+		width: 50%;
+		text-align: center;
+		span {
+			font-size: @iconSize;
+			opacity: 0.2;
+			.transition-properties( display 0.2s;);
+		}
+	}
+	
+	.desc-container {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+		text-align:right;
+		
+		.desc {
+			opacity: 0.7;
+	  	}
+		.desc, .desc2 {
+		    font-size: @descSize;
+			text-transform: uppercase;
+	    }
+	}
+	
+	.back {
+		background: @gradient;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		
+		.content {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-grow: 1;
+		}
+		.inner-content {
+			padding: 10px;
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+				.measure-container {
+					margin-top: 10px;
+					margin-bottom:5px;
+					.label{
+						line-height: 0.9;
+						font-size: @backLabelSize;
+					}
+					.value {
+						font-weight: bold;
+						font-size: @backLabelSize;
+					}
+				}
+			}
+		.left {
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.header {
+		  	height: 50px;
+			width: 100%;
+		  	max-width: 100%;
+			padding-top: 13px;
+			padding-right: 20px;
+			line-height: 0.8;
+		  	text-overflow: ellipsis;
+			padding-left: 60px;
+
+		  	.label{
+				display: inline-block;
+				font-size: @headerSize;
+		  	}
+		  	span{
+				display: inline-block;
+				font-size: @smallIconSize;
+				margin-right: 10px;
+				
+		  	}
+	  	}
+	}
+	
+	.overlay {
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.5);
+		display: flex;
+  		align-items: center;
+		justify-content: center;
+	}
+	
+	.button {
+		width: 250px;
+		height: 50px;
+		line-height: 50px;
+		border-color: rgba(255,255,255,0.6);;
+		border-width: 2px;
+		border-style: solid;
+		border-radius: 5px;
+		text-align: center;
+		font-size: @labelSize;
+		font-weight: bold;
+		cursor: pointer;
+		margin: 10px;
+	}
+	.button-small {
+		width: 150px;
+		height: 30px;
+		line-height: 30px;
+		font-size: @descSize;
+		background-color: #8C8C8C;
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+	
+	.close {
+		position:absolute;
+		top:10px;
+		right:10px;
+		cursor: pointer;
+	}
+}
+
+.kpi-tile[max-width~="400px"] {
+
+	.container-icon span {
+		font-size: @iconSize * 0.7;
+	}
+	.value-container {
+		.label {
+			font-size: @labelSize * 0.7;
+		}
+		.value {
+			font-size: @valSize * 0.7;
+		}
+	}
+	.content .inner-content .measure-container {
+		.label {
+		  font-size: @backLabelSize * 0.9;
+		}
+		.value {
+		  font-size: @backLabelSize * 0.9;
+		}
+	}
+	.header {
+		.label {
+			font-size: @headerSize * 0.8;
+		}
+		span {
+			font-size: @smallIconSize * 0.8;
+		}
+	}
+	
+}
+
+.kpi-tile[max-width~="330px"] {
+	.content {
+		.right {
+			display: none;
+		}
+	}
+}
+
+.kpi-tile[max-width~="280px"] {
+	.container-icon span {
+		display:none;
+	}
+	
+	.header {
+		span {
+			display: none;
+		}
+	}
+}
+
+.kpi-tile[max-width~="190px"] {
+	.overlay .button {
+		font-size: @labelSize*0.6;
+	}
+	
+	.value-container {
+		.label {
+			font-size: @labelSize * 0.5;
+		}
+		.value {
+			font-size: @valSize * 0.5;
+		}
+	}
+	.content .inner-content .measure-container {
+		.label {
+		  font-size: @backLabelSize * 0.7;
+		}
+		.value {
+		  font-size: @backLabelSize * 0.7;
+		}
+	}
+	.header {
+		display: none;
+	}
+}
+
+.kpi-tile[max-height~="150px"] {
+	.desc-container {
+		.desc2 {
+			display: none;
+		}
+	}
+	.header {
+		display: none;
+	}
+}
+
+.kpi-tile[max-height~="130px"] {
+	.desc-container {
+		.desc {
+			display: none;
+		}
+	}
+	.container-icon span {
+		font-size: @iconSize * 0.7;
+	}
+}
+
+.kpi-tile[max-height~="100px"] {
+	.container-icon span {
+		font-size: @iconSize * 0.5;
+	}
+	.value-container {
+		.label {
+			font-size: @labelSize * 0.5;
+		}
+		.value {
+			font-size: @valSize * 0.5;
+		}
+	}
+	.content .inner-content .measure-container.bottom {
+		display: none;
+	}
+	
+}
+
+.transition-properties(...) {
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -o-transition: @arguments;
+  transition: @arguments;
+}
+
+
+</style>
+<div><div class="kpi-tile" ng-init="showDetails = false" ng-mouseleave="hover = false" ng-mouseover="hover = true">
+
+  <!-- Front side -->
+  <div class="container-content" ng-if="!showDetails">
+   	<div class="container-icon">
+		<span class="lui-icon lui-icon lui-icon--{{settings.icon}}"></span>
+  	</div>
+  	<div class="text-container">
+		<div class="value-container">
+	  		<div class="label">
+				{{data.headers[0].qFallbackTitle ? data.headers[0].qFallbackTitle : "Measure"}}
+	  		</div>
+	  		<div class="value">
+	    		{{data.rows[0].measures[0].qText ? data.rows[0].measures[0].qText : "Value"}}
+	  		</div>
+		</div>
+		<div class="desc-container">
+	  		<div class="desc">
+	    		{{settings.footer1 ? settings.footer1 : "Title"}}
+	 		 </div>
+	  		<div class="desc2">
+	    		{{settings.footer2 ? settings.footer2 : "Value"}}
+	 		 </div>
+		</div>
+	</div>
+	
+  </div>
+  
+  <!-- Back side -->  
+  <div class="container-content back" ng-if="showDetails">
+  	
+	<div class="header">
+		<span class="lui-icon lui-icon lui-icon--{{settings.icon}}"></span>
+		<div class="label">
+			{{data.headers[0].qFallbackTitle + " details"}}
+	  	</div>
+	</div>
+	<div class="content">
+	  <div class="inner-content left">
+		<div class="measure-container">
+		  <div class="label">
+			{{data.headers[1].qFallbackTitle ? data.headers[1].qFallbackTitle : "Measure"}}
+		  </div>
+		  <div class="value">
+			{{data.rows[0].measures[1].qText ? data.rows[0].measures[1].qText : "Value"}}
+		  </div>
+		</div>
+		<div class="measure-container bottom">
+		  <div class="label">
+			{{data.headers[2].qFallbackTitle ? data.headers[2].qFallbackTitle : "Measure"}}
+		  </div>
+		  <div class="value">
+			{{data.rows[0].measures[2].qText ? data.rows[0].measures[2].qText : "Value"}}
+		  </div>
+		</div>
+	  </div>
+	  <div class="inner-content right">
+	  
+	  	<div class="button button-small" ng-show="settings.showLink === true && settings.linkUrl">
+			<a href="{{settings.linkUrl}}" target="_blank">Details</a></div>
+	  	</div>  
+	</div>
+  </div>
+  
+  <div class="overlay" ng-show="hover &amp;&amp; !showDetails &amp;&amp; data.rows[0].measures[1]">
+	<div class="button" ng-click="showDetails = true">See details</div>
+  </div>
+  <span class="lui-icon lui-icon lui-icon--close close" ng-show="showDetails &amp;&amp; hover" ng-click="showDetails = false"></span>
+  
+</div></div>

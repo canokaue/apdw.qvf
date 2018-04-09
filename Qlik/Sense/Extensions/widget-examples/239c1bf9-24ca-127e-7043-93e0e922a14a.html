@@ -1,0 +1,232 @@
+<style>
+@green: #61a729;
+@green-darken: #529a18;
+
+@blue: #52a2cc;
+@blue-darken: #468bb0;
+
+.frame{
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.blue{
+  background: linear-gradient(45deg, @blue-darken 0%, @blue 100%); 
+}
+.green {
+  background: linear-gradient(45deg, @green-darken 0%, @green 100%); 
+}
+
+/******************* SENSE COMPONENTS *******************/
+
+.content {
+	position: absolute;
+	width: 100%;
+	height: calc( 100% );
+	top: 25px;
+	text-align:center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-direction:column;
+}
+
+/******************* HEADER *******************/
+
+.header{
+  width:100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  box-shadow: -1px 9px 13px -6px rgba(0,0,0,0.75);
+  background-color: white;
+}
+
+.header-logo-wrapper{
+  height: 100%;
+  padding: 20px 0 0 20px;
+  box-sizing: border-box;
+  background-color: white;
+  float: left;
+}
+
+/******************* FOOTER *******************/
+
+.footer{
+  position:absolute;
+  width:100%;
+  height:50px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  bottom:0;
+  box-shadow: -1px -6px 13px -6px rgba(0,0,0,0.75);
+  background-color: white;
+}
+
+.footer-logo-wrapper{
+  height: 100%;
+  padding-right: 20px;
+  padding-top: 5px;
+  background-color: white;
+  box-sizing: border-box;
+  float: right;
+}
+.footer-slogan {
+  float:left;
+  font-size: 14pt;
+  color: black;
+  height:50px;
+  line-height: 50px;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 50pt;
+  color: white; 
+  font-style: italic;
+  text-transform: uppercase;
+  -webkit-transition: font 0.2s; /* Safari */
+  transition: font 0.2s;
+}
+
+h2 {
+  font-size: 100pt;
+  color: white; 
+  font-style: italic;
+  text-transform: uppercase;
+  transition: font 0.2s;
+}
+
+/******************* ELEMENT QUERY *******************/
+
+.frame[max-width~="550px"] {
+  .header-dash, .footer-dash {
+	display: none;
+  }
+  .footer-slogan {
+	display: none;
+  }
+  h1 {
+    font-size: 50pt;
+  }
+
+  h2 {
+	font-size: 100pt;
+	
+  }
+}
+
+.frame[max-height~="500px"] {
+ h1 {
+    font-size: 40pt;
+  }
+
+  h2 {
+	font-size: 70pt;
+	
+  }
+}
+
+.frame[max-width~="440px"] {
+  .header-logo-wrapper{
+	width: 100%;
+	float: none;
+	line-height: 100px;
+	text-align: center;
+	padding: 10px 0 0 0;
+
+  }
+  .header-logo{
+	height:40px;
+	width:auto;
+  }
+
+  .footer-logo-wrapper{
+	text-align: center;
+	float: none;
+  }
+  h1 {
+    font-size: 40pt;
+  }
+
+  h2 {
+	font-size: 70pt;
+	
+  }
+}
+
+.frame[max-height~="400px"] {
+ h1 {
+    font-size: 20pt;
+  }
+
+  h2 {
+	font-size: 50pt;
+	
+  }
+}
+
+.frame[max-width~="280px"] {
+
+  .header-logo{
+	height:30px;
+	width:auto;
+  }
+  h1 {
+    font-size: 20pt;
+  }
+
+  h2 {
+	font-size: 50pt;
+	
+  }
+}
+
+.frame[max-height~="300px"] {
+ h1 {
+    font-size: 15pt;
+  }
+
+  h2 {
+	font-size: 25pt;
+	
+  }
+}
+
+.frame[max-height~="250px"] {
+ .header{
+ 	display:none;
+ }
+ .footer{
+ 	display:none;
+ }
+ .content{
+ 	top: 0;
+ }
+}
+
+
+    
+    
+
+</style>
+<div><div class="frame" ng-class="settings.color">
+    <div class="header">
+        <div class="header-logo-wrapper">
+            <img class="header-logo" alt="Qlik Sense" src="../resources/img/core/logo/sense-desktop.png">
+        </div>
+    </div>
+    <div class="content">
+	  <h1>{{data.headers[0].qFallbackTitle}}</h1>
+	  <h2>{{data.rows[0].measures[0].qText}}</h2>
+	</div>
+	
+    <div class="footer">
+        <div class="footer-slogan"> Lorem ipsum dolor sit amet ™ </div>
+        <div class="footer-logo-wrapper">
+            <img alt="Qlik Sense" src="../resources/img/core/logo/devhub_logo_no_icon.png">
+        </div>
+    </div>
+</div></div>

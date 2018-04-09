@@ -1,0 +1,9 @@
+{
+  "name": "Narratives",
+  "description": "Add narratives to your Qlik dashboards instantly. Powered by Narrative Science.",
+  "type": "visualization",
+  "version": 1.0,
+  "author": "Jonathan Drake",
+  "icon": "text-image",
+  "preview": "narratives-for-qlik-preview.png"
+}

@@ -1,0 +1,62 @@
+<style>.prevSheet {
+	width:100%;
+	height:100%;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-direction:column;
+	
+}
+
+.prevIcon {
+	cursor: pointer;
+	font-size: 200pt;
+	
+}
+
+.prevSheet[max-width~="300px"] {
+  .prevIcon {
+  	font-size: 150pt;
+  }
+}
+.prevSheet[max-width~="200px"] {
+  .prevIcon {
+  	font-size: 130pt;
+  }
+}
+.prevSheet[max-width~="100px"] {
+  .prevIcon {
+  	font-size: 100pt;
+  }
+}
+.prevSheet[max-width~="50px"] {
+  .nextIcon {
+  	font-size: 50pt;
+  }
+}
+
+.nextSheet[max-height~="400px"] {
+  .prevIcon {
+  	font-size: 150pt;
+  }
+}
+.prevSheet[max-height~="300px"] {
+  .prevIcon {
+  	font-size: 130pt;
+  }
+}
+.prevSheet[max-height~="200px"] {
+  .prevIcon {
+  	font-size: 90pt;
+  }
+}
+.prevSheet[max-height~="100px"] {
+  .prevIcon {
+  	font-size: 50pt;
+  }
+}</style>
+<div><div class="nextSheet">
+  <div class="nextIcon lui-icon lui-icon lui-icon--arrow-right" ng-click="navigation.nextSheet();" ng-style="{color: settings.color}"></div>
+</div>
+
+</div>

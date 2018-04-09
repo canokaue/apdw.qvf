@@ -1,0 +1,218 @@
+{
+  "name": "Drill KPI",
+  "description": "Add up to three measures to this KPI.",
+  "author": "",
+  "library": "widget-examples",
+  "meta": {
+    "type": "kpi"
+  },
+  "properties": {
+    "sections": [
+      {
+        "type": "header",
+        "order": 1,
+        "ref": "header1",
+        "label": "Settings"
+      },
+      {
+        "type": "header",
+        "order": 1,
+        "ref": "header2",
+        "label": "Link"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "footer1",
+        "label": "Footer 1"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 1,
+        "parent": "header1",
+        "ref": "footer2",
+        "label": "Footer 2"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "#1abc9c",
+        "options": [
+          {
+            "label": "Turquoise",
+            "value": "#1abc9c"
+          },
+          {
+            "label": "Emerald",
+            "value": "#2ecc71"
+          },
+          {
+            "label": "Peter River",
+            "value": "#3498db"
+          },
+          {
+            "label": "Amethyst",
+            "value": "#9b59b6"
+          },
+          {
+            "label": "Wet Asphalt",
+            "value": "#34495e"
+          },
+          {
+            "label": "Green Sea",
+            "value": "#16a085"
+          },
+          {
+            "label": "Nephritis",
+            "value": "#27ae60"
+          },
+          {
+            "label": "Belize Hole",
+            "value": "#2980b9"
+          },
+          {
+            "label": "Wisteria",
+            "value": "#8e44ad"
+          },
+          {
+            "label": "Midnight Blue",
+            "value": "#2c3e50"
+          },
+          {
+            "label": "Sun Flower",
+            "value": "#f1c40f"
+          },
+          {
+            "label": "Carrot",
+            "value": "#e67e22"
+          },
+          {
+            "label": "Alizarin",
+            "value": "#e74c3c"
+          },
+          {
+            "label": "Clouds",
+            "value": "#ecf0f1"
+          },
+          {
+            "label": "Concrete",
+            "value": "#95a5a6"
+          },
+          {
+            "label": "Orange",
+            "value": "#f39c12"
+          },
+          {
+            "label": "Pumpkin",
+            "value": "#d35400"
+          },
+          {
+            "label": "Pomegranate",
+            "value": "#c0392b"
+          },
+          {
+            "label": "Silver",
+            "value": "#bdc3c7"
+          },
+          {
+            "label": "Asbestos",
+            "value": "#7f8c8d"
+          }
+        ],
+        "order": 2,
+        "parent": "header1",
+        "ref": "color",
+        "label": "Color"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "bookmark",
+        "options": [
+          {
+            "label": "Bookmark",
+            "value": "bookmark"
+          },
+          {
+            "label": "Tag",
+            "value": "tag"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Warning (triangle)",
+            "value": "warning-triangle"
+          },
+          {
+            "label": "Person",
+            "value": "person"
+          },
+          {
+            "label": "Key",
+            "value": "key"
+          },
+          {
+            "label": "Home",
+            "value": "home"
+          },
+          {
+            "label": "Map",
+            "value": "map"
+          },
+          {
+            "label": "Tick",
+            "value": "tick"
+          }
+        ],
+        "order": 3,
+        "parent": "header1",
+        "ref": "icon",
+        "label": "Icon"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 4,
+        "parent": "header1",
+        "ref": "header",
+        "label": "Header"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 1,
+        "parent": "header2",
+        "ref": "linkUrl",
+        "label": "Link Url"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 0,
+        "parent": "header2",
+        "ref": "showLink",
+        "label": "Show Link"
+      }
+    ],
+    "measures": {
+      "min": 0,
+      "max": 3
+    },
+    "dimensions": {
+      "max": 0,
+      "min": 0
+    }
+  }
+}

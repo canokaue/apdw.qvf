@@ -1,0 +1,13 @@
+{
+	"name" : "Angular Chart",
+	"description" : "Extension with AngularJS template. Requires Qlik Sense 2.1 or later.",
+	"icon" : "bar-chart-vertical",
+	"type" : "visualization",
+	"version" : "3.0.0",
+	"author" : "Qlik",
+	"homepage" : "http://help.qlik.com/sense/en-US/developer",
+	"keywords" : "qlik-sense, angularjs, chart, visualization",
+	"license" : "MIT",
+	"repository" : "",
+    "dependencies" : { "qlik-sense" : ">=3.0.x" }
+}

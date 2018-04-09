@@ -1,0 +1,49 @@
+<style>.wrapper {
+    margin-right:20px;
+	
+	table {
+		thead tr th {
+		border-bottom-style:solid;
+		border-bottom-color:#ccc;
+		border-bottom-width:2px;
+		padding-bottom:5px;
+		text-align:left;
+		color:#808080;
+		font-size:14px;
+		padding:10px;
+	  }
+	  
+	  tbody tr {
+		  line-height:35px;
+		  border-top-style:solid;
+		  border-top-color:#cccccc;
+		  border-top-width:1px;
+	  }
+	  tbody td {
+	  	padding-left:10px;
+	  }
+	}
+}
+
+
+.center {
+    text-align:center;
+}</style>
+<div><div class="wrapper">
+<div class="top-header" ng-if="settings.tableHeaderTitle">
+	{{settings.tableHeaderTitle}}
+</div>
+<table>
+	<thead>
+		<tr>
+			<th ng-repeat="head in data.headers track by $index" class="header" ng-click="head.orderBy()">{{head.qFallbackTitle}}
+		</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="row in data.rows track by $index">
+		  <td ng-repeat="cell in row.cells track by $index" ng-click="cell.select()" class="selectable"> {{cell.qText}} </td>
+		</tr>
+	</tbody>
+</table>
+</div></div>

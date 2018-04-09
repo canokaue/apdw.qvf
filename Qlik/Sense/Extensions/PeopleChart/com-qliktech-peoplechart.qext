@@ -1,0 +1,13 @@
+{
+	"name" : "People Chart",
+	"description" : "People Chart Extension Example",
+	"icon" : "bar-chart-vertical",
+	"type" : "visualization",
+	"version": "3.0.0",
+	"author": "Qlik",
+	"homepage" : "http://help.qlik.com/sense/en-US/developer",
+	"keywords" : "qlik-sense, chart, visualization",
+	"license" : "MIT",
+	"repository" : "",
+    "dependencies" : { "qlik-sense" : ">=3.0.x" }
+}

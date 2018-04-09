@@ -1,0 +1,12 @@
+{
+	"type": "mashup-template",
+	"name": "SlideShow mashup",
+    "version": "1.0.0",
+	"description": "SlideShow mashup based on Bootstrap with an image slideshow",
+	"homepage" : "",
+	"author": "",
+    "keywords" : "qlik-sense, mashup",
+	"license" : "",
+	"repository" : "",
+    "dependencies" : { "qlik-sense" : ">=2.1.x" }
+}

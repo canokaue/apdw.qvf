@@ -1,0 +1,12 @@
+{
+	"name" : "ToolBar",
+	"description" : "ToolBar example",
+	"type" : "visualization",
+	"version": "3.0.0",
+	"author" : "Qlik",
+	"homepage" : "http://help.qlik.com/sense/en-US/developer",
+	"keywords" : "qlik-sense, visualization",
+	"license" : "MIT",
+	"repository" : "",
+    "dependencies" : { "qlik-sense" : ">=3.0.x" }
+}

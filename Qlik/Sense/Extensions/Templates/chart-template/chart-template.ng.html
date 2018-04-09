@@ -1,0 +1,8 @@
+<div qv-extension style="height: 100%; position: relative; overflow: auto;">
+	<div class="css_bars_row" ng-repeat="item in layout.qHyperCube.qDataPages[0].qMatrix" title="{{item[0].qText}}" data-row="{{ $index }}"
+		 ng-click="sel($event)" data-value="{{ item[0].qElemNumber }}" ng-class="{selected: (item[0].qState) === 'S' || selections.indexOf(item[0].qElemNumber) !== -1 }">
+		<div class="css_bars_bar" ng-style="{'width':getPercent(item[1].qNum)+'%'}"><span>{{item[0].qText}}</span></div>
+		<div class="css_bars_per">
+			<span ng-class="{over: (getPercent(item[1].qNum)>95)}">{{getPercent(item[1].qNum)}} %</span></div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<div qv-extension style="height: 100%; position: relative; overflow: auto;">
+	AngularJS example extension
+	<div style="height: 100%; position: relative;">
+		<div ng-repeat="row in table.rows  track by $index">
+			<div title="{{row.dimensions[0].qText}}: {{row.measures[0].qText}}" class="selectable"
+				ng-class="{'selected':row.dimensions[0].selected}" ng-click="row.dimensions[0].select()">
+				<div class="item-label">{{row.dimensions[0].qText}}</div>
+				<div ng-style="{'width' : (row.measures[0].getPercentOfMax() / 1.5) + '%'	}" class="bar">&nbsp;</div>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+	</div>
+</div>

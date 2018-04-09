@@ -1,0 +1,38 @@
+{
+  "name": "Formatted Table with Title",
+  "description": "Formatted table with a conditional title.",
+  "author": "",
+  "library": "widget-examples",
+  "meta": {
+    "type": "table"
+  },
+  "properties": {
+    "dimensions": {
+      "min": 1,
+      "max": 99
+    },
+    "measures": {
+      "min": 0,
+      "max": 99
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "tableHeaderTitle",
+        "label": "Table header title"
+      }
+    ]
+  }
+}

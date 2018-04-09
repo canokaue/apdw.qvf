@@ -1,0 +1,12 @@
+{
+  "name": "widget-examples",
+  "type": "widget-library",
+  "widgets": [
+    "4c6e0d3d-733d-35da-df60-4a1070545078",
+    "19463ee0-4b34-99a4-f128-b974aa3073a5",
+    "5d725b77-f0d7-5f8b-51fc-3c91c2dcf331",
+    "239c1bf9-24ca-127e-7043-93e0e922a14a",
+    "11bc21eb-d9db-876e-8133-9b2cd8739e1a",
+    "8d5a9cb2-275f-0fee-f719-071fcd4d470b"
+  ]
+}

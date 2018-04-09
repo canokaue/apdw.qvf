@@ -1,0 +1,230 @@
+<style>
+@blue: #52a2cc;
+@blue-darken: #468bb0;
+
+.kpi {
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(45deg, @blue-darken 0%, @blue 100%);
+
+}
+.text-underline {
+  width:0%;
+  height: 1px;
+  margin-top:10px;
+  background: linear-gradient(45deg, #E8FFFD 0%, #F6E4F7 100%); 
+  -webkit-transition: width 0.2s; 
+  transition: width 0.2s;
+  display:none;
+}
+
+.kpi:hover .title .text-underline {
+    width:100%;
+}
+
+.title {
+  width:100%;
+  display: block;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.text-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background: linear-gradient(45deg, @blue-darken 0%, @blue 100%); 
+  -webkit-transition: all 0.2s; 
+  transition: all 0.2s;
+}
+
+.kpi:hover .text-wrapper {
+  background: linear-gradient(45deg, @blue-darken 0%, @blue 100%); 
+}
+
+h1 {
+  font-size: 20pt;
+  color: white; 
+  font-style: italic;
+  text-transform: uppercase;
+  -webkit-transition: font 0.2s; 
+  transition: font 0.2s;
+}
+
+h2 {
+  font-size: 50pt;
+  color: white; 
+  font-style: italic;
+  text-transform: uppercase;
+  -webkit-transition: font 0.2s;
+  transition: font 0.2s;
+}
+
+h3 {
+  font-size: 30pt;
+  color: white; 
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  -webkit-transition: font 0.2s; 
+  transition: font 0.2s;
+}
+
+.kpi:hover h2 {
+  font-size:70pt;
+}
+.kpi[max-width~="600px"] {
+  h2 {
+	font-size:40pt;
+  }
+  h1 {
+	font-size:15pt;
+  }
+  h3 {
+	font-size:25pt;
+  }
+  &:hover {
+	h2 {
+	  font-size:50pt;
+	}
+  }
+}
+.kpi[max-width~="400px"] {
+  h2 {
+	font-size:30pt;
+  }
+  h1 {
+	font-size:13pt;
+  }
+  h3 {
+	font-size:22pt;
+  }
+  &:hover {
+	h2 {
+	  font-size:40pt;
+	}
+  }
+}
+.kpi[max-width~="300px"] {
+  h2 {
+	font-size:20pt;
+  }
+  h1 {
+	font-size:11pt;
+  }
+  h3 {
+	font-size:17pt;
+  }
+  &:hover {
+	h2 {
+	  font-size:30pt;
+	}
+  }
+}
+
+.kpi[max-width~="200px"] {
+  h2 {
+	font-size:13pt;
+  }
+  h1 {
+	font-size:10pt;
+  }
+  h3 {
+	font-size:15pt;
+  }
+  &:hover {
+	h2 {
+	  font-size:16pt;
+	}
+  }
+}
+
+.kpi[max-width~="100px"] {
+  h2 {
+	font-size:11pt;
+	
+
+  }
+  h1 {
+	font-size:8pt;
+	margin-right:10px;
+	&:after {
+		content: ":"
+	}
+  }
+  h3 {
+	display:none;
+  }
+  &:hover {
+	h2 {
+	  font-size:13pt;
+	}
+  }
+  .title {
+  	height:100%;
+	flex-direction:row;
+	-ms-transform: rotate(90deg); 
+	-webkit-transform: rotate(90deg); 
+	transform: rotate(90deg);
+  }
+  .text-wrapper {
+  	height:100%;
+  }
+  
+}
+
+.kpi[min-width~="100px"] {
+  .text-underline {
+	display: block;
+  }
+}
+.kpi[min-width~="200px"] {
+  .text-underline {
+	height: 2px;
+  }
+}
+.kpi[min-width~="300px"] {
+  .text-underline {
+	height: 4px;
+  }
+}
+.kpi[min-width~="500px"] {
+  .text-underline {
+	height: 6px;
+	max-width: 400px;
+  }
+}
+
+.kpi[max-height~="300px"] {
+  h3 {
+	display: none;
+  }
+}
+
+
+
+
+</style>
+<div><div class="kpi">		
+  <div class="text-wrapper">
+	<div class="title">
+	  <h3>{{settings.header}}</h3>
+	  <h1>{{data.headers[0].qFallbackTitle}}</h1>
+	  <div class="text-underline"></div>
+	  <h2>{{data.rows[0].measures[0].qText}}</h2>
+	</div>
+  </div>
+</div>
+
+
+</div>
